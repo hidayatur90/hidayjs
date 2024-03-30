@@ -1,14 +1,21 @@
 const User = require('../../models/user');
 const bcrypt = require('bcryptjs');
-const jwt = require('jsonwebtoken');
+const TokenController = require('./TokenController');
 
 // Register
 exports.register = async (req, res) => {
     try {
         const { full_name, username, password } = req.body;
         const hashedPassword = await bcrypt.hash(password, 10);
+
+        const token = TokenController.generateAccessToken({ username: req.body.username });
+
         const user = await User.create({ full_name, username, password: hashedPassword });
-        res.status(201).json({ user });
+
+        res.status(201).json({
+            user,
+            token: token
+        });
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
@@ -30,10 +37,13 @@ exports.login = async (req, res) => {
             return res.status(401).json({ error: 'Invalid password' });
         }
 
-        res.status(200).json({ user });
+        const token = TokenController.generateAccessToken({ username: req.body.username });
+
+        res.status(200).json({
+            user,
+            token : token
+        });
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
 }
-
-// Midleware
