@@ -1,6 +1,7 @@
 const User = require('../../models/user');
 const bcrypt = require('bcryptjs');
 const TokenController = require('./TokenController');
+const BlacklistController = require('./BlacklistController');
 
 // Register
 exports.register = async (req, res) => {
@@ -10,14 +11,20 @@ exports.register = async (req, res) => {
 
         const token = TokenController.generateAccessToken({ username: req.body.username });
 
-        const user = await User.create({ full_name, username, password: hashedPassword });
+        const user = await User.create({
+            full_name,
+            username,
+            password: hashedPassword
+        });
 
         res.status(201).json({
             user,
             token: token
         });
     } catch (error) {
-        res.status(500).json({ error: error.message });
+        res.status(500).json({
+            error: error.message
+        });
     }
 }
 
@@ -41,9 +48,23 @@ exports.login = async (req, res) => {
 
         res.status(200).json({
             user,
-            token : token
+            token: token
         });
+    } catch (error) {
+        res.status(500).json({
+            error: error.message
+        });
+    }
+}
+
+// Logout
+exports.logout = async (req, res) => {
+    try {
+        const authHeader = req.headers['authorization'];
+        const token = authHeader.split(' ')[1];
+        BlacklistController.blacklistToken(token);
+        res.status(200).json({ message: 'Logout successful' });
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
-}
+};

@@ -1,14 +1,17 @@
-const express = require('express');
 const jwt = require('jsonwebtoken');
 const dotenv = require('dotenv');
 dotenv.config();
+const BlacklistController = require('./BlacklistController');
+
+const SECRET_KEY = process.env.SECRET_KEY;
 
 // Generate Token
 exports.generateAccessToken = (username) => {
-    const SECRET_KEY = process.env.SECRET_KEY;
     const expiresIn = 60 * 60 * 1;
-
-    return jwt.sign(username, SECRET_KEY, { expiresIn: expiresIn });
+    return jwt.sign(
+        username, SECRET_KEY, {
+        expiresIn: expiresIn
+    });
 }
 
 // Midleware
@@ -22,7 +25,12 @@ exports.authenticateToken = (req, res, next) => {
     }
 
     const token = authHeader.split(' ')[1];
-    const SECRET_KEY = process.env.SECRET_KEY;
+
+    if (BlacklistController.isTokenBlacklisted(token)) {
+        return res.status(401).json({
+            error: 'Token expired or invalid'
+        });
+    }
 
     try {
         const jwtDecode = jwt.verify(token, SECRET_KEY);
