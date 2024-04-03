@@ -12,6 +12,10 @@ router.post('/auth/login', AuthController.login);
 router.post('/auth/logout', AuthController.logout);
 
 // Routes User
-router.get('/user', authenticateToken, UserController.showUser);
+router.get('/user', authenticateToken, UserController.index);
+router.get('/user/:id', authenticateToken, UserController.show);
+router.post('/user', authenticateToken, UserController.store);
+router.put('/user/:id', authenticateToken, UserController.update);
+router.delete('/user/:id', authenticateToken, UserController.destroy);
 
 module.exports = router;
