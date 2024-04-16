@@ -72,7 +72,11 @@ On this HidayJS template we use JWT auth, so if you want to try it make sure you
 | authorization | Bearer your_jwt_token |
 
 ## Improvement
-HidayJS its just MVC template for ExpressJS so you can improve that with your requirement apps. For example you can improve with Swagger to make the Documentation API, you can change the default auth to OAuth, etc.
+HidayJS its just MVC template for ExpressJS so you can improve that with your requirement apps. For example you can improve with Swagger to make the Documentation API, you can change the default auth to OAuth, etc. 
+You can use every sequelize-cli command like make models, seeder or migrate. For example you can use this command to make new models call Employee
+```sh
+npx sequelize-cli model:generate --name Employee --attributes fist_name:string,last_name:string
+```
 
 ## License
 
