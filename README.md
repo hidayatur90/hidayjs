@@ -1,4 +1,4 @@
-<p align="center"><img src="https://github.com/hidayatur90/hd-template/assets/85423030/75670ab7-c935-4152-8726-761403f0765e" width="300" alt="HidayJS"></p>
+<p align="center"><img src="https://github.com/hidayatur90/hd-template/assets/85423030/d4f5975e-8fa4-430d-bf8e-67a66af5cc01" width="300" alt="HidayJS"></p>
 
 # About HidayJS
 
