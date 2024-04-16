@@ -2,7 +2,7 @@
 
 # About HidayJS
 
-HidayJS is open-source *pure backend* template using ExpressJS based on clean MVC (Model View Controllers) architecture.
+HidayJS is open-source *RESTful API pure backend* template using ExpressJS based on clean MVC (Model View Controllers) architecture.
 
 ## Tech
 
