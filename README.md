@@ -1,5 +1,96 @@
-![hiday-js](https://github.com/hidayatur90/hd-template/assets/85423030/68f5a341-de5a-4751-a79c-9d2b006feec0)
+<p align="center"><img src="https://github.com/hidayatur90/hd-template/assets/85423030/68f5a341-de5a-4751-a79c-9d2b006feec0" width="200" alt="kamu"></p>
 
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-</head><body><article id="ee493ec3-2d13-4db6-9c7a-4f6208718b9d" class="page sans"><header><h1 class="page-title">HidayJS v1.0.0</h1><p class="page-description"></p></header><div class="page-body"><p id="0d81b676-8eb5-40ad-a25b-faa8f8dcda7a" class="">Pure Backend Framework using ExpressJS and MC model Laravel structure. <br/>Link repository : <br/><a href="https://github.com/hidayatur90/hd-template">https://github.com/hidayatur90/hd-template</a></p><h3 id="712d7c38-1779-4bad-ab98-19ad0d160878" class="">Techstack use and version</h3><ul id="c5fa7e86-b081-43b6-9cef-1bc034634081" class="bulleted-list"><li style="list-style-type:disc">ExpressJS version ^4.19.2</li></ul><ul id="8c4d3764-f6be-4ed8-874d-98e48f2dee12" class="bulleted-list"><li style="list-style-type:disc">Sequelize version ^6.37.1</li></ul><ul id="51337621-23f9-4b6d-9f96-22094033dbe9" class="bulleted-list"><li style="list-style-type:disc">Sequelize-cli version ^6.6.2</li></ul><ul id="c84c3be2-620b-4b67-8803-cfb6cdf5b1a5" class="bulleted-list"><li style="list-style-type:disc">Nodemon version ^3.1.0</li></ul><ul id="d345df23-7a43-4c00-8835-06df0add3296" class="bulleted-list"><li style="list-style-type:disc">Dotenv version ^16.4.5</li></ul><ul id="3ac031ee-c46d-4597-bf40-430571bd04a4" class="bulleted-list"><li style="list-style-type:disc">Swagger</li></ul><ul id="c29edab8-dd70-493e-9a90-854ce6931671" class="bulleted-list"><li style="list-style-type:disc">OAuth JWT Token</li></ul><ul id="9fd5e841-b7e0-48e8-9b1b-7aac29f10fd8" class="bulleted-list"><li style="list-style-type:disc">Supported dialects: mssql, mariadb, mysql, oracle, postgres, db2 and sqlite.</li></ul><h1 id="71056898-4ac2-4b15-b6c8-b7ae6560fe2e" class="">To Do</h1><ul id="12644a26-e108-4732-997f-8932b9920c49" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked">Authentication</span><div class="indented"></div></li></ul><ul id="0ce0b671-ee09-4312-a6f7-c6daafc11686" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked">Authorization</span><div class="indented"></div></li></ul><ul id="e7d33864-c399-49d3-8aec-1ea41746181e" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked">JWT Token</span><div class="indented"></div></li></ul><ul id="38aa7ff7-c4e5-4af7-bf40-ce4ed9e4d900" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked">Security</span><div class="indented"></div></li></ul><ul id="7ae375be-6d55-4f78-ae1d-8722517314c5" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked">Secure Password</span><div class="indented"></div></li></ul><ul id="bf7f2d9b-8f2f-49d0-8ce7-b4425a99aab1" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked">Hashing Encode/decode</span><div class="indented"></div></li></ul><ul id="40fb0ff8-0a1f-49fb-a266-9557108908de" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Controllers</span><div class="indented"></div></li></ul><ul id="638cf0d8-9b42-4b19-bcb2-a8934b9c6f48" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Command line npm/npx</span><div class="indented"></div></li></ul><ul id="c2907e91-77cc-4adf-9fb6-6ab2b8df7337" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Swagger</span><div class="indented"></div></li></ul><p id="433551a7-db32-4f2c-8f80-093f69b9f8cc" class="">
-</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
+# About HidayJS (v1.0.0)
+
+HidayJS is open-source *pure backend* template using ExpressJS based on clean MVC (Model View Controllers) architecture.
+
+## Tech
+
+- [ExpressJS] version ^4.19.2
+- [Sequelize] version ^6.37.1
+- [Sequelize-cli] version ^6.6.2
+- [Nodemon] version ^3.1.0
+- [Dotenv] version ^16.4.5
+- Supported dialects: [mssql], [mariadb], [mysql], [oracle], [postgres], [db2] and [sqlite].
+
+This stack is still under development and possible to change at any time.
+
+## Installation
+
+Dillinger requires [Node.js] to run. In this example below we want to use npm and [npx], if you use [yarn] or others it doesn't matter just adjust it.
+
+1. Clone this Repository
+```sh
+git clone https://github.com/hidayatur90/hd-template
+```
+
+2. Install the dependencies and devDependencies and start the server.
+
+```sh
+cd hd-template
+npm i
+```
+
+3. Rename .env.example to .env and update the file.
+```sh
+PORT=your_port
+DB_NAME=your_database_name
+DB_USER=your_database_user
+DB_PASSWORD=your_database_password
+DB_HOST=your_database_host
+DB_DIALECT=your_database_dialect
+SECRET_KEY=your_secret_key_here
+```
+*adjust .env to what you will use
+
+4. Set your dialect
+
+In this template the default dialect that use is MySQL, if you want to change it just install the library and adjust it. For example you want to use PostgreeSQL you can do...
+```sh
+npm install pg
+```
+and change DB_DIALECT on your .env file to your own dialect.
+
+5. Migrate the database and seed it using sequelize-cli
+```sh
+npx sequelize-cli db:migrate 
+npx sequelize-cli seed:generate
+```
+
+6. Finally, run the HidayJS
+```sh
+npm run dev
+```
+
+## Default Auth
+
+On this HidayJS template we use JWT auth, so if you want to try it make sure you must authenticate and set your token to the header.
+
+| header | value |
+| ------ | ------ |
+| Content-Type | application/json |
+| authorization | Bearer your_jwt_token |
+
+## Improvement
+HidayJS its just MVC template for ExpressJS so you can improve that with your requirement apps. For example you can improve with Swagger to make the Documentation API, you can change the default auth to OAuth, etc.
+
+## License
+
+[MIT License]
+
+   [ExpressJS ]: <https://expressjs.com/>
+   [Sequelize]: <https://sequelize.org/>
+   [Sequelize-cli ]: <https://sequelize.org/docs/v7/cli/>
+   [Nodemon]: <https://www.npmjs.com/package/nodemont>
+   [Dotenv]: <https://www.npmjs.com/package/dotenv>
+   [mssql]: <https://www.microsoft.com/en-us/sql-server/sql-server-downloads>
+   [mariadb]: <https://mariadb.org/>
+   [mysql]: <https://www.mysql.com/>
+   [oracle]: <https://www.oracle.com/id/>
+   [postgres]: <https://www.postgresql.org/>
+   [db2]: <https://www.ibm.com/id-id/products/db2>
+   [sqlite]: <https://www.sqlite.org/>
+   [node.js]: <http://nodejs.org>
+   [npx]: <https://www.npmjs.com/package/npx>
+   [yarn]: <https://yarnpkg.com/>
+   [MIT License]: <https://github.com/hidayatur90/hd-template/blob/main/LICENSE>
