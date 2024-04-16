@@ -1,4 +1,4 @@
-<p align="center"><img src="https://github.com/hidayatur90/hd-template/assets/85423030/68f5a341-de5a-4751-a79c-9d2b006feec0" width="200" alt="kamu"></p>
+<p align="center"><img src="https://github.com/hidayatur90/hd-template/assets/85423030/08e0c67c-0162-4010-a863-1d4d86cd6041" width="600" alt="HidayJS"></p>
 
 # About HidayJS (v1.0.0)
 
