@@ -1,6 +1,6 @@
 <p align="center"><img src="https://github.com/hidayatur90/hd-template/assets/85423030/75670ab7-c935-4152-8726-761403f0765e" width="300" alt="HidayJS"></p>
 
-# About HidayJS (v1.0.0)
+# About HidayJS
 
 HidayJS is open-source *pure backend* template using ExpressJS based on clean MVC (Model View Controllers) architecture.
 
